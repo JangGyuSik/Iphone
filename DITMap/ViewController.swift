@@ -86,14 +86,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         print("callout Accessory Tapped!")
         
+        
         let viewAnno = view.annotation
         let viewTitle: String = ((viewAnno?.title)!)!
         let viewSubTitle: String = ((viewAnno?.subtitle)!)!
-        
+
         print("\(viewTitle) \(viewSubTitle)")
-        
-        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .actionSheet) //팝업 메세지 출력
+        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil)) // 확인 추가
+        ac.addAction(UIAlertAction(title: "DELETE", style: .destructive, handler: nil)) // 확인 추가
         present(ac, animated: true, completion: nil)
     }
 
