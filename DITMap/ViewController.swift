@@ -10,38 +10,46 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
+    
     @IBOutlet weak var myMapView: MKMapView!
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //  지도의 center 위치, DIT 위치정보 35.166197, 129.072594
-        let center : CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.166197, 129.072594)
-        let span : MKCoordinateSpan = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegionMake(center, span)
+
         
-        myMapView.setRegion(region, animated: true)
         
-        // Annotation(Pin) 꼽기
-        let anno01 = MKPointAnnotation()
-        anno01.coordinate = center
-        anno01.title = "DIT 동의과학대학교"
-        anno01.subtitle = "나의 꿈이 자라는 곳"
+//        // Annotation(Pin) 꼽기
+//        let anno01 = MKPointAnnotation()
+//        anno01.coordinate = center
+//        anno01.title = "DIT 동의과학대학교"
+//        anno01.subtitle = "나의 꿈이 자라는 곳"
+//        
+//        // 부산시민공원 35.168444, 129.057832
+//        let anno02 = MKPointAnnotation()
+//        anno02.coordinate.latitude = 35.168444
+//        anno02.coordinate.longitude = 129.057832
+//        anno02.title = "부산시민공원"
+//        anno02.subtitle = "부산시민들의 휴식처"
+//        
+//        myMapView.addAnnotation(anno01)
+//        myMapView.addAnnotation(anno02)
         
-        // 부산시민공원 35.168444, 129.057832
-        let anno02 = MKPointAnnotation()
-        anno02.coordinate.latitude = 35.168444
-        anno02.coordinate.longitude = 129.057832
-        anno02.title = "부산시민공원"
-        anno02.subtitle = "부산시민들의 휴식처"
+        senter()
+        let a = ViewPoint(coordinate: CLLocationCoordinate2D(latitude : 35.166197, longitude: 129.072594), title: "DIT 동의과학대학교", subtitle: "꿈이 자라는 곳")
+        let b = ViewPoint(coordinate: CLLocationCoordinate2D(latitude : 35.168444, longitude: 129.057832), title: "부산시민공원", subtitle: "시민공원")
         
-        myMapView.addAnnotation(anno01)
-        myMapView.addAnnotation(anno02)
+        myMapView.addAnnotations([a, b])
         
         myMapView.delegate = self
+    }
+    
+    func senter() {
+        //  지도의 center 위치, DIT 위치정보 35.166197, 129.072594
+        let location = CLLocationCoordinate2D(latitude: 35.166197, longitude: 129.072594)
+        let region = MKCoordinateRegionMakeWithDistance(location, 2000.0, 4000.3)
+        myMapView.setRegion(region, animated: true)
+
     }
     
     // MKMapViewDelegate method
@@ -72,7 +80,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             leftIconView.image = UIImage(named:"dit.png" )
 
         }
-        
+    
         annotationView?.leftCalloutAccessoryView = leftIconView
         
         let btn = UIButton(type: .detailDisclosure)

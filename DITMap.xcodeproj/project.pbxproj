@@ -14,6 +14,7 @@
 		051D91671F57D506000A0D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051D91651F57D506000A0D18 /* LaunchScreen.storyboard */; };
 		051D91701F57D660000A0D18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051D916F1F57D660000A0D18 /* MapKit.framework */; };
 		05338EC71F580AF2000E54E8 /* bright-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 05338EC61F580AF2000E54E8 /* bright-7.png */; };
+		1434B4571F677E0700E7FF18 /* ViewPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434B4561F677E0700E7FF18 /* ViewPoint.swift */; };
 		14DB16431F610C6F004AA9F0 /* dit.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB16421F610C6F004AA9F0 /* dit.png */; };
 		14DB16451F610C84004AA9F0 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14DB16441F610C84004AA9F0 /* logo.jpg */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		051D91681F57D506000A0D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		051D916F1F57D660000A0D18 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		05338EC61F580AF2000E54E8 /* bright-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bright-7.png"; sourceTree = "<group>"; };
+		1434B4561F677E0700E7FF18 /* ViewPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPoint.swift; sourceTree = "<group>"; };
 		14DB16421F610C6F004AA9F0 /* dit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dit.png; sourceTree = "<group>"; };
 		14DB16441F610C84004AA9F0 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				051D915E1F57D506000A0D18 /* ViewController.swift */,
 				14DB16421F610C6F004AA9F0 /* dit.png */,
 				051D91601F57D506000A0D18 /* Main.storyboard */,
+				1434B4561F677E0700E7FF18 /* ViewPoint.swift */,
 				14DB16441F610C84004AA9F0 /* logo.jpg */,
 				051D91631F57D506000A0D18 /* Assets.xcassets */,
 				051D91651F57D506000A0D18 /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				051D915F1F57D506000A0D18 /* ViewController.swift in Sources */,
+				1434B4571F677E0700E7FF18 /* ViewPoint.swift in Sources */,
 				051D915D1F57D506000A0D18 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
