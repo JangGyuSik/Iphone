@@ -92,19 +92,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        print("callout Accessory Tapped!")
+        if control == view.rightCalloutAccessoryView{
+            self.performSegue(withIdentifier: "go", sender: self)
+        }
         
-        
-        let viewAnno = view.annotation
-        let viewTitle: String = ((viewAnno?.title)!)!
-        let viewSubTitle: String = ((viewAnno?.subtitle)!)!
-
-        print("\(viewTitle) \(viewSubTitle)")
-
-        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .actionSheet) //팝업 메세지 출력
-        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil)) // 확인 추가
-        ac.addAction(UIAlertAction(title: "DELETE", style: .destructive, handler: nil)) // 확인 추가
-        present(ac, animated: true, completion: nil)
+//        print("callout Accessory Tapped!")
+//        
+//        
+//        let viewAnno = view.annotation
+//        let viewTitle: String = ((viewAnno?.title)!)!
+//        let viewSubTitle: String = ((viewAnno?.subtitle)!)!
+//
+//        print("\(viewTitle) \(viewSubTitle)")
+//
+//        let ac = UIAlertController(title: viewTitle, message: viewSubTitle, preferredStyle: .actionSheet) //팝업 메세지 출력
+//        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil)) // 확인 추가
+//        ac.addAction(UIAlertAction(title: "DELETE", style: .destructive, handler: nil)) // 확인 추가
+//        present(ac, animated: true, completion: nil)
     }
 
 }
