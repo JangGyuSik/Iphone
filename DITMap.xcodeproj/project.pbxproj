@@ -16,6 +16,8 @@
 		05338EC71F580AF2000E54E8 /* bright-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 05338EC61F580AF2000E54E8 /* bright-7.png */; };
 		1434B4571F677E0700E7FF18 /* ViewPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434B4561F677E0700E7FF18 /* ViewPoint.swift */; };
 		14CE11DB1F6A504800CD8AE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CE11DA1F6A504800CD8AE5 /* DetailViewController.swift */; };
+		14CE11DD1F6A52E400CD8AE5 /* dit2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14CE11DC1F6A52E400CD8AE5 /* dit2.jpg */; };
+		14CE11DF1F6A52EA00CD8AE5 /* busan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14CE11DE1F6A52EA00CD8AE5 /* busan.jpg */; };
 		14DB16431F610C6F004AA9F0 /* dit.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB16421F610C6F004AA9F0 /* dit.png */; };
 		14DB16451F610C84004AA9F0 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14DB16441F610C84004AA9F0 /* logo.jpg */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		05338EC61F580AF2000E54E8 /* bright-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bright-7.png"; sourceTree = "<group>"; };
 		1434B4561F677E0700E7FF18 /* ViewPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPoint.swift; sourceTree = "<group>"; };
 		14CE11DA1F6A504800CD8AE5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		14CE11DC1F6A52E400CD8AE5 /* dit2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dit2.jpg; sourceTree = "<group>"; };
+		14CE11DE1F6A52EA00CD8AE5 /* busan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = busan.jpg; sourceTree = "<group>"; };
 		14DB16421F610C6F004AA9F0 /* dit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dit.png; sourceTree = "<group>"; };
 		14DB16441F610C84004AA9F0 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,8 @@
 			children = (
 				05338EC61F580AF2000E54E8 /* bright-7.png */,
 				051D915C1F57D506000A0D18 /* AppDelegate.swift */,
+				14CE11DE1F6A52EA00CD8AE5 /* busan.jpg */,
+				14CE11DC1F6A52E400CD8AE5 /* dit2.jpg */,
 				051D915E1F57D506000A0D18 /* ViewController.swift */,
 				14DB16421F610C6F004AA9F0 /* dit.png */,
 				051D91601F57D506000A0D18 /* Main.storyboard */,
@@ -152,10 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DB16431F610C6F004AA9F0 /* dit.png in Resources */,
+				14CE11DF1F6A52EA00CD8AE5 /* busan.jpg in Resources */,
 				051D91671F57D506000A0D18 /* LaunchScreen.storyboard in Resources */,
 				051D91641F57D506000A0D18 /* Assets.xcassets in Resources */,
 				051D91621F57D506000A0D18 /* Main.storyboard in Resources */,
 				14DB16451F610C84004AA9F0 /* logo.jpg in Resources */,
+				14CE11DD1F6A52E400CD8AE5 /* dit2.jpg in Resources */,
 				05338EC71F580AF2000E54E8 /* bright-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

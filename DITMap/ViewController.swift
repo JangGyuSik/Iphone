@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
+    var titleName = ""
     
     @IBOutlet weak var myMapView: MKMapView!
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //        myMapView.addAnnotation(anno02)
         
         senter()
-        let a = ViewPoint(coordinate: CLLocationCoordinate2D(latitude : 35.166197, longitude: 129.072594), title: "DIT 동의과학대학교", subtitle: "꿈이 자라는 곳")
+        let a = ViewPoint(coordinate: CLLocationCoordinate2D(latitude : 35.166197, longitude: 129.072594), title: "동의과학대학교", subtitle: "꿈이 자라는 곳")
         let b = ViewPoint(coordinate: CLLocationCoordinate2D(latitude : 35.168444, longitude: 129.057832), title: "부산시민공원", subtitle: "시민공원")
         
         myMapView.addAnnotations([a, b])
@@ -64,7 +65,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             if annotation.title! == "부산시민공원" {
                 annotationView?.pinTintColor = UIColor.green
-            } else if annotation.title! == "DIT 동의과학대학교"{
+            } else if annotation.title! == "동의과학대학교"{
                 annotationView?.pinTintColor = UIColor.blue
             }
             
@@ -76,25 +77,37 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         if annotation.title! == "부산시민공원"{
         leftIconView.image = UIImage(named:"logo.jpg" )
-        } else if annotation.title! == "DIT 동의과학대학교"{
+        } else if annotation.title! == "동의과학대학교"{
             leftIconView.image = UIImage(named:"dit.png" )
 
         }
-    
+
+
         annotationView?.leftCalloutAccessoryView = leftIconView
         
         let btn = UIButton(type: .detailDisclosure)
         annotationView?.rightCalloutAccessoryView = btn
         
+        
         return annotationView
+        
         
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
+        let viewAnno = view.annotation
+        let viewTitle: String = ((viewAnno?.title)!)!
+
+        titleName = viewTitle
         if control == view.rightCalloutAccessoryView{
+            
             self.performSegue(withIdentifier: "go", sender: self)
-        }
+
+            }
+        
+
+
         
 //        print("callout Accessory Tapped!")
 //        
@@ -109,7 +122,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //        ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil)) // 확인 추가
 //        ac.addAction(UIAlertAction(title: "DELETE", style: .destructive, handler: nil)) // 확인 추가
 //        present(ac, animated: true, completion: nil)
+    
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let detailVC = segue.destination as! DetailViewController
+        detailVC.Date = titleName
+    }
 }
-

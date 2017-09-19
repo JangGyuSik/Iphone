@@ -12,10 +12,19 @@ class DetailViewController: UIViewController {
 
     
     @IBOutlet weak var myImage: UIImageView!
+    var Date = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(Date)
+        
+        if Date == "동의과학대학교"{
+            myImage.image = UIImage(named:"dit2.jpg")
+        } else if Date == "부산시민공원"{
+            myImage.image = UIImage(named:"busan.jpg")
+        }
+        
         // Do any additional setup after loading the view.
     }
 
